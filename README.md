@@ -50,6 +50,8 @@ kubectl apply -f . # create deployment, ingress, and service
 kubectl delete -f . # remove resources
 ```
 
+- Visit app at `app_ip` e.g. `http://34.117.202.234/`
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
