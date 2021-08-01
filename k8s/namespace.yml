@@ -1,0 +1,7 @@
+
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: react-gke
+  labels:
+    name: react-gke

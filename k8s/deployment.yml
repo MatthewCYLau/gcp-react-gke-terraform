@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-gke-deployment
+  namespace: react-gke
+spec:
+  selector:
+    matchLabels:
+      app: react-gke
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: react-gke
+    spec:
+      containers:
+        - name: react-gke-backend-container
+          image: ""
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: "1"
+            requests:
+              cpu: "0.2"
+          ports:
+            - containerPort: 80
+              protocol: TCP

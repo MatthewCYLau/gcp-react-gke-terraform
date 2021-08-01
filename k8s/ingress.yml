@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: react-gke-ingress
+  namespace: react-gke
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "react-gke-static-ip"
+    kubernetes.io/ingress.allow-http: "true"
+    kubernetes.io/ingress.class: "gce"
+spec:
+  defaultBackend:
+    service:
+      name: react-gke-service
+      port: 
+        number: 8080

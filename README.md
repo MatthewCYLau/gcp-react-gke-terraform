@@ -13,7 +13,13 @@ gcloud components install kubectl # installs the kubectl CLI tool
 
 ## Deployment
 
-- TBC
+```bash
+gcloud container clusters get-credentials react-gke-cluster --region=europe-west2
+cd k8s
+kubectl apply -f namespace.yml # create namespace
+kubectl apply -f . # create deployment, ingress, and service
+kubectl delete -f . # remove resources
+```
 
 ## Contributing
 
