@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: react-gke-backend-container
-          image: ""
+          image: "gcr.io/react-gke-terraform/react-gke-nginx:v1"
           imagePullPolicy: Always
           resources:
             limits:
