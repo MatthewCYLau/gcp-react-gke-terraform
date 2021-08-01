@@ -11,5 +11,5 @@ spec:
   defaultBackend:
     service:
       name: react-gke-service
-      port: 
+      port:
         number: 8080
