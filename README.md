@@ -4,8 +4,8 @@ A reference project to deploy a React app onto Google Kubernetes Engine (GKE) wi
 
 ## Pre-requisites
 
-- Make sure you have installed [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli),and [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
-- Also install the `kubectl` CLI tool:
+- Make sure you have installed [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli), and [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
+- Also install the `kubectl` CLI tool
 
 ```bash
 gcloud components install kubectl # installs the kubectl CLI tool
@@ -19,7 +19,7 @@ terraform -help # prints Terraform options
 ```bash
 region  = "europe-west2"
 zone    = "europe-west2-b"
-project = "react-gke-terraform"
+project = <GCP-PROJECT-ID>
 creds   = <PATH-TO-GCP-CREDENTIALS-JSON>
 ```
 
@@ -43,7 +43,7 @@ terraform destroy # destroys GCP stack
 ## Deployment
 
 ```bash
-gcloud container clusters get-credentials react-gke-cluster --region=europe-west2
+gcloud container clusters get-credentials react-gke-cluster --region=europe-west2 # updates a kubeconfig file with appropriate credentials
 cd k8s
 kubectl apply -f namespace.yml # create namespace
 kubectl apply -f . # create deployment, ingress, and service
