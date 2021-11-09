@@ -26,9 +26,9 @@ creds   = <PATH-TO-GCP-CREDENTIALS-JSON>
 ## Build/Push the Docker image
 
 ```bash
-docker build -t gcr.io/<your_project_id>/react-gke-nginx:v1 . # builds Docker image
+docker build -t gcr.io/<your_project_id>/react-gke-app:v1 . # builds Docker image
 gcloud auth configure-docker # configure Docker CLI tool to authenticate with Container Registry
-docker push gcr.io/<your_project_id>/react-gke-nginx:v1 # pushes image to Container Registry!
+docker push gcr.io/<your_project_id>/react-gke-app:v1 # pushes image to Container Registry!
 ```
 
 ## Create GCP resources
