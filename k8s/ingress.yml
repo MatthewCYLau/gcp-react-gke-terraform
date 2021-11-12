@@ -12,4 +12,4 @@ spec:
     service:
       name: react-gke-service
       port:
-        number: 8080
+        number: 80
